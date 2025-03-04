@@ -1,95 +1,281 @@
 <!doctype html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../assets/LOGIC LAB (remove bg).png" type="image/x-icon" />
-    <!-- <link rel="stylesheet" href="../tailwindcss/NPM/output.css"> -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-
-    <title>Logic Lab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../output.css" rel="stylesheet">
+    <link href="../input.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- navbars -->
-    <nav class="bg-white-800 shadow-md">
-        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div class="relative flex h-16 items-center justify-between">
-                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden"></div>
-                <div class="flex items-center justify-start">
-                    <img class="h-16 w-auto" src="../assets/logic-lab icon.png" alt="Logic Lab" />
-                </div>
-                <div class="flex flex-1 items-center justify-end">
-                    <div class="hidden sm:ml-6 sm:block">
-                        <div class="flex space-x-4">
-                            <a href="#" class="px-3 py-2 text-sm text-gray-700 hover:text-blue-950"
-                                aria-current="page">Beranda</a>
-                            <a href="#" class="px-3 py-2 text-sm text-gray-700 hover:text-blue-950">Layanan</a>
-                            <a href="#" class="px-3 py-2 text-sm text-gray-700 hover:text-blue-950">Tentang</a>
-                            <a href="#" class="px-3 py-2 text-sm text-gray-700 hover:text-blue-950">Desain</a>
-                            <a href="#"
-                                class="rounded-full bg-blue-950 px-9 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Kirim
-                                Pesan</a>
-                        </div>
+    <nav class="navbar bg-white-800 has-outline">
+        <div class="navbar-menu has-outline">
+            <div class="navbar-brand has-outline">
+                <img src="../assets/logic-lab icon.png" alt="Logic Lab" />
+            </div>
+            <menu class="navbar-menu justify-end">
+                <div class="hidden sm:block">
+                    <div class="navbar-buttons has-outline">
+                        <a href="#home" class="navbar-item text-gray-700 hover:text-blue-950"
+                            aria-current="page">Beranda</a>
+                        <a href="#service" class="navbar-item text-gray-700 hover:text-blue-950">Layanan</a>
+                        <a href="#aboutUs" class="navbar-item text-gray-700 hover:text-blue-950">Tentang</a>
+                        <a href="#" class="navbar-item text-gray-700 hover:text-blue-950">Desain</a>
+                        <a href="#"
+                            class="rounded-full bg-blue-950 px-9 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Kirim
+                            Pesan</a>
                     </div>
                 </div>
-                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                    <button type="button"
-                        class="relative rounded-full bg-blue-950 p-1 text-white hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                        </svg>
-                    </button>
-                </div>
+            </menu>
+            <div class="nav-buttons">
+                <button type="button" class="relative rounded-full bg-blue-950 p-1 text-white focus:outline-hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero section -->
-    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+    <!-- Hero section / home -->
+    <main id="home" class="section">
+        <div class="sm:mb-8 flex sm:flex-row flex-col sm:justify-center">
             <div class="text-start">
-                <h1 class="text-5xl font-semibold tracking-tight text-balance text-blue-950 uppercase ">Logic Lab</h1>
-                <p class="mt-8 text-base text-pretty text-black">Kami adalah komunitas belajar IT yang juga menyediakan
+                <h1 class="title uppercase text-blue-950 has-outline">logic lab</h1>
+                <span class="text-orange-500 has-outline capitalize flex mr-auto justify-end">think, code,
+                    create!</span>
+                <p class="subtitle text-black has-outline">Kami adalah komunitas belajar IT yang juga menyediakan
                     layanan professional dalam pengembangan web, desain UI/UX, dan konsultasi teknologi</p>
-                <div class="mt-10 flex items-center justify-center gap-x-6">
+                <div class="mt-10 items-center gap-x-6 has-outline">
                     <a href="#"
                         class="rounded-full bg-blue-950 px-9 py-2 text-sm font-semibold text-gray-300 hover:bg-gray-700 hover:text-white">Layanan</a>
                     <a href="#"
                         class="rounded-full outline-3 outline-blue-950 px-9 py-2 text-sm font-semibold text-blue-950 hover:bg-gray-700 hover:text-white">Komunitas</a>
                 </div>
             </div>
-
         </div>
-    </div>
-    <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-        aria-hidden="true">
-    </div>
+    </main>
     </div>
 
     <!-- About Us -->
     <!-- <div class="relative isolate px-6 pt-14 lg:px-8"></div> -->
-    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+    <section id="aboutUs" class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div class="sm:mb-3 sm:flex sm:justify-center">
             <div class="text-center">
-                <h1 class="text-5xl font-semibold tracking-tight text-balance text-orange-500">Tentang Logic Lab</h1>
-                <p class="mt-8 text-lg font-medium text-pretty text-gray-500">Bingung mau bikin website mulai darimana?
-                    Yuk wujudkan website impianmu bersama kami yang disesuaikan dengan seleramu.</p>
-                <div class="mt-10 flex items-center justify-center gap-x-6">
+                <h1 class="title capitalize text-orange-500">Tentang Logic Lab</h1>
+                <p class="subtitle font-semibold text-gray-500">Saat ini, kami berfokus pada dua bagian utama, yaitu :
+                </p>
+            </div>
+        </div>
+        <div class="flex flex-col sm:flex-row justify-center text-center">
+            <a href="#" class="block max-w-sm p-6 hover:bg-gray-100">
+                <img src="" alt="image" srcset="" />
+                <h5 class="mb-2 text-2xl font-bold tracking-normal text-gray-900 capitalize">layanan professional</h5>
+            </a>
+            <a href="#" class="block max-w-sm p-6 hover:bg-gray-100">
+                <img src="" alt="image" srcset="" />
+                <h5 class="mb-2 text-2xl font-bold tracking-normal text-gray-900 capitalize">komunitas belajar</h5>
+            </a>
+        </div>
+    </section>
+
+    <!-- Service -->
+    <section id="Service" class="section has-outline items-center bg-blue-600">
+        <div class="flex flex-col sm:mb-8 sm:flex-row sm:justify-start">
+            <div class="text-start">
+                <h1 class="title capitalize text-orange-400">layanan</h1>
+                <p class="subtitle has-outline text-white">Website? Desain? Konsultasi? Hubungi Kami!</p>
+                <div class="mt-5 flex gap-x-6 has-outline justify-end">
                     <a href="#"
-                        class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
-                        started</a>
+                        class="rounded-full bg-white px-9 py-2 text-sm font-semibold text-orange-400 hover:bg-gray-700 capitalize">lihat
+                        selangkapnya</a>
                 </div>
             </div>
         </div>
+    </section>
+    <br><br>
+    <section class="py-2.5 has-outline rounded-3xl bg-blue-600 max-w-7xl">
+        <div class="grid gap-8 lg:grid-cols-4 md:grid-cols-2 lg:py-8">
+            <div class="text-center">
+                <h1 class="title text-white has-outline capitalize font-medium">2</h1>
+                <p class="subtitle has-outline text-white">Tahun Pengalaman</p>
+            </div>
+            <div class="text-center">
+                <h1 class="title text-white has-outline capitalize font-medium">999+</h1>
+                <p class="subtitle has-outline text-white">Project Terselesaikan</p>
+            </div>
+            <div class="text-center">
+                <h1 class="title text-white has-outline capitalize font-medium">99+</h1>
+                <p class="subtitle has-outline text-white">Client kami</p>
+            </div>
+            <div class="text-center">
+                <h1 class="title text-white has-outline capitalize font-medium">5</h1>
+                <p class="subtitle has-outline text-white">Team Professional</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Card -->
+    <div class="flex flex-col md:flex-row rounded-lg border border-gray-200 bg-white shadow-sm hover:bg-gray-100">
+        <div class="flex flex-col-2 justify-between p-4">
+            <h1 class="title font-bold text-black">Headline</h1>
+            <p class="subtitle mt-3 text-base text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+                earum blanditiis quasi quaerat. Laborum cupiditate ratione, nam voluptates facere tenetur repudiandae
+                amet praesentium culpa nihil itaque corporis quae tempore eligendi.</p>
+        </div>
+        <img class="h-48 w-full object-cover md:h-auto md:w-48" src="/docs/images/blog/image-4.jpg" alt="" />
     </div>
+    <br />
+    <div class="flex flex-col items-center rounded-lg border border-gray-200 bg-white shadow-sm hover:bg-gray-100">
+        <div class="flex flex-col-2 justify-between p-4">
+            <h1 class="title font-bold text-black">Headline</h1>
+            <p class="subtitle mb-3 text-justify text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Totam earum blanditiis quasi quaerat. Laborum cupiditate ratione, nam voluptates facere tenetur
+                repudiandae amet praesentium culpa nihil itaque corporis quae tempore eligendi.</p>
+            <img class="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+                src="/docs/images/blog/image-4.jpg" alt="" />
+        </div>
     </div>
 
+    <!-- Contact Us -->
+    <section id="contactUs" class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+            <h1 class="title text-balance text-gray-900"><span class="capitalize">ayo</span> hubungi kami</h2>
+                <p class="subtitle text-gray-600"><span class="capitalize">ada</span> yang mau disampaikan atau
+                    ditanyakan? Yuk langsung hubungi kami</p>
+        </div>
+        <form action="#" method="POST" class="mx-auto mt-10 max-w-xl sm:mt-20">
+            <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                <div>
+                    <!-- Name -->
+                    <div class=" mt-2.5 relative inline-flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+                        <input type="text" name="name" id="name" autocomplete="name" placeholder="Nama"
+                            class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:bg-blue-600">
+                    </div>
+                </div>
+                <!-- No Telepon -->
+                <div class="relative inline-flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                    </svg>
+                    <input type="tel" name="no_telp" id="no_telp" autocomplete="cc-number" placeholder="No Telepon"
+                        class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:bg-blue-600">
+                </div>
+                <!-- email -->
+                <div class="sm:col-span-2 has-outline">
+                    <div class="relative inline-flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+                        <input type="email" name="email" id="email" autocomplete="email" placeholder="Email"
+                            class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:bg-blue-600">
+                    </div>
+                </div>
+                <!-- Pesan -->
+                <div class="sm:col-span-2 has-outline">
+                    <div class="relative inline-flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+                        <textarea name="message" id="message" rows="4" placeholder="Pesan"
+                            class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:bg-blue-600"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3 has-outline">
+                <button type="submit"
+                    class="rounded-full bg-blue-800 px-12 py-3 text-sm font-semibold text-gray-300 hover:bg-gray-700 hover:text-white">Kirim</a>
+            </div>
+        </form>
+    </section>
+
     <!-- Footer -->
-    <footer class="bg-blue-950 py-2 text-center font-semibold text-white">Copyright 2025 | Logic Lab</footer>
+    <footer class="bg-white mx-auto w-full max-w-screen-xl">
+        <div class="flex h-16 w-auto items-center justify-start">
+            <img src="../assets/logic-lab icon.png" alt="Logic Lab" />
+        </div>
+        <div class="grid grid-cols-2 gap-8 md:grid-cols-4 lg:py-8">
+            <div>
+                <p class="subtitle text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+                    natus, expedita quibusdam placeat, fuga eligendi ab nobis laborum unde, nulla ea. Commodi sed illum
+                    exercitationem, est culpa deleniti excepturi in.</p>
+            </div>
+            <div>
+                <h2 class="subtitle capitalize mb-6 font-bold text-gray-800">Our Services</h2>
+                <ul class="font-normal text-gray-900">
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">UI / UX Designer</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Web Development</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">IT Consultant</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="subtitle capitalize font-bold text-gray-900">Quick Link</h2>
+                <ul class="font-normal text-gray-900">
+                    <li class="mb-4">
+                        <a href="#home" class="hover:underline">Home</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="aboutUs" class="hover:underline">About Us</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#contactUs" class="hover:underline">Contacts Us</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Blog</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Sitemap</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="subtitle capitalize mb-6 font-bold text-gray-900">Our Product</h2>
+                <ul class="font-normal text-gray-900">
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Logiclab - Admin</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Logiclab - Ecommerce</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Logiclab - Landing Page</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Logiclab - Ecommerce</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex justify-center bg-blue-700">
+            <small class="subtitle text-white">Copyright 2025 | Logiclab</small>
+        </div>
+    </footer>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </body>
 
 </html>
