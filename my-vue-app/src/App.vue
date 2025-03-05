@@ -1,18 +1,9 @@
-<!doctype html>
-<html class="bg-gray-300">
+<script setup>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../tailwindcss/input.css" rel="stylesheet">
-    <link href="../tailwindcss/output.css" rel="stylesheet">
-    <link rel="shortcut icon" href="../assets/LOGIC LAB (remove bg).png" type="image/x-icon">
-</head>
+</script>
 
-<body>
-    <!-- navbars -->
-
-    <nav class="navbar bg-white shadow-md shadow-gray-500 has-outline ">
+<template>
+      <nav class="navbar bg-white shadow-md shadow-gray-500 has-outline ">
         <div class="navbar-brand items-center sm:items-stretch sm:justify-center">
             <div class="flex shrink-0 items-center">
                 <!-- <img class="h-8 w-auto" src="../assets/logic-lab icon.png" alt="Your Company" height="500px"
@@ -23,7 +14,7 @@
 
         <!-- Mobile menu button-->
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <button type="button bu"
+            <button type="button"
                 class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-blue-950 hover:text-blue-950 focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
                 aria-controls="mobile-menu" aria-expanded="false">
                 <span class="absolute -inset-0.5"></span>
@@ -101,7 +92,6 @@
             </div>
         </section>
     </main>
-    </div>
 
     <!-- About Us -->
     <!-- <div class="relative isolate px-6 pt-14 lg:px-8"></div> -->
@@ -353,10 +343,9 @@
         </div>
     </footer>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-</body>
+</template>
 
-</html>
+<style scoped>
+@import url(../../tailwindcss/input.css);
+@import url(../../tailwindcss/output.css);
+</style>
