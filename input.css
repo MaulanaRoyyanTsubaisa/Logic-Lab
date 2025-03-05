@@ -24,6 +24,10 @@
   @apply absolute inset-y-0 right-0 flex pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-1;
 }
 
+.buttons {
+  @apply absolute inset-y-0 right-0 flex pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-1;
+}
+
 .section {
   @apply mx-auto px-20 sm:py-48 lg:py-56;
 }
