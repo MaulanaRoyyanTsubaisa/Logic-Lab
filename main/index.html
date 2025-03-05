@@ -10,11 +10,34 @@
 
 <body>
     <!-- navbars -->
-    <nav class="navbar bg-white-800">
-        <div class="navbar-brand items-center justify-between sm:items-stretch sm:justify-center">
-            <div class=" flex shrink-0 items-center">
-                <img class="h-12 w-auto" src="../assets/logic-lab icon.png" alt="Logic Lab" />
+    <nav class="navbar bg-white has-outline shadow-md shadow-gray-500 ">
+        <div class="navbar-brand items-center justify-end sm:items-stretch sm:justify-center">
+            <div class="flex shrink-0 items-center">
+                <!-- <img class="h-8 w-auto" src="../assets/logic-lab icon.png" alt="Your Company" height="500px"
+                    width="500px"> -->
             </div>
+
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                <!-- Mobile menu button-->
+                <button type="button"
+                    class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-blue-950 hover:text-blue-950 focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
+                    aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="absolute -inset-0.5"></span>
+                    <span class="sr-only">Open main menu</span>
+
+                    <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+
+                    <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
             <menu class="navbar-menu justify-end">
                 <div class="hidden sm:block">
                     <div class="navbar-buttons">
@@ -29,14 +52,30 @@
                     </div>
                 </div>
             </menu>
-            <div class="nav-buttons">
-                <button type="button" class="relative rounded-full bg-blue-800 p-1 text-white focus:outline-hidden">
+            <div class="absolute inset-y-0 right-0 flex pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-1">
+                <button type="button"
+                    class="relative rounded-full bg-blue-500 hover:text-blue-950 p-1 text-blue-400 focus:outline-hidden focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                    <span class="absolute -inset-1.5"></span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                     </svg>
                 </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="sm:hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3">
+                <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+                    aria-current="page">Beranda</a>
+                <a href="#"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Layanan</a>
+                <a href="#"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Tentang</a>
+                <a href="#"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Desain</a>
             </div>
         </div>
     </nav>
@@ -98,26 +137,28 @@
         </div>
     </section>
     <br><br>
-    <section class="py-2.5 rounded-3xl bg-blue-800 max-w-7xl">
-        <div class="grid gap-8 lg:grid-cols-4 md:grid-cols-2 lg:py-8">
+    <section class="max-w-7xl rounded-3xl bg-blue-800 py-2.5">
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4 lg:divide-x-3 lg:divide-solid lg:divide-white lg:py-8">
             <div class="text-center">
-                <h1 class="title text-white capitalize font-medium">2</h1>
+                <h1 class="title font-medium text-white capitalize">2</h1>
                 <p class="subtitle text-white">Tahun Pengalaman</p>
             </div>
             <div class="text-center">
-                <h1 class="title text-white capitalize font-medium">999+</h1>
+                <h1 class="title font-medium text-white capitalize">999+</h1>
                 <p class="subtitle text-white">Project Terselesaikan</p>
+                <!-- border-l-2 border-solid border-white -->
             </div>
             <div class="text-center">
-                <h1 class="title text-white capitalize font-medium">99+</h1>
+                <h1 class="title font-medium text-white capitalize">99+</h1>
                 <p class="subtitle text-white">Client kami</p>
             </div>
             <div class="text-center">
-                <h1 class="title text-white capitalize font-medium">5</h1>
+                <h1 class="title font-medium text-white capitalize">5</h1>
                 <p class="subtitle text-white">Team Professional</p>
             </div>
         </div>
     </section>
+
 
     <!-- Card -->
     <section>
