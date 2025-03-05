@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .navbar {
-  @apply mx-auto max-w-7xl px-8 shadow-md;
+  @apply mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 relative flex h-16 items-center;
 }
 
 .navbar-brand {
