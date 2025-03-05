@@ -6,39 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../output.css" rel="stylesheet">
     <link href="../input.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/LOGIC LAB (remove bg).png" type="image/x-icon">
 </head>
 
 <body>
     <!-- navbars -->
-    <nav class="navbar bg-white has-outline shadow-md shadow-gray-500 ">
-        <div class="navbar-brand items-center justify-end sm:items-stretch sm:justify-center">
+    <nav class="navbar bg-white shadow-md shadow-gray-500 has-outline ">
+        <div class="navbar-brand items-center sm:items-stretch sm:justify-center">
             <div class="flex shrink-0 items-center">
                 <!-- <img class="h-8 w-auto" src="../assets/logic-lab icon.png" alt="Your Company" height="500px"
                     width="500px"> -->
+                Logic Lab
             </div>
+        </div>
 
-            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                <!-- Mobile menu button-->
-                <button type="button"
-                    class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-blue-950 hover:text-blue-950 focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
-                    aria-controls="mobile-menu" aria-expanded="false">
-                    <span class="absolute -inset-0.5"></span>
-                    <span class="sr-only">Open main menu</span>
+        <!-- Mobile menu button-->
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <button type="button"
+                class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-blue-950 hover:text-blue-950 focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
+                aria-controls="mobile-menu" aria-expanded="false">
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
 
-                    <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                        aria-hidden="true" data-slot="icon">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
+                <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    aria-hidden="true" data-slot="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
 
-                    <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                        aria-hidden="true" data-slot="icon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
+                <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    aria-hidden="true" data-slot="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </button>
 
-            <menu class="navbar-menu justify-end">
+            <menu class="navbar-menu">
                 <div class="hidden sm:block">
                     <div class="navbar-buttons">
                         <a href="#home" class="navbar-item text-gray-700 hover:text-blue-950"
@@ -82,10 +84,10 @@
 
     <!-- Hero section / home -->
     <main id="home" class="section" style="background:  url(../assets/hero-section/hero-section.png);">
-        <div class="sm:mb-8 flex sm:flex-row flex-col sm:justify-center">
-            <div class="text-start">
+        <section class="sm:mb-8 mx-auto flex sm:flex-row flex-col sm:justify-center">
+            <div class="container text-start">
                 <h1 class="title uppercase text-blue-950">logic lab</h1>
-                <span class="text-orange-500 capitalize flex mr-auto justify-end">think, code,
+                <span class="text-orange-500 font-bold capitalize">think, code,
                     create!</span>
                 <p class="subtitle text-black">Kami adalah komunitas belajar IT yang juga menyediakan
                     layanan professional dalam pengembangan web, desain UI/UX, dan konsultasi teknologi</p>
@@ -96,7 +98,7 @@
                         class="rounded-full outline-3 outline-blue-950 px-9 py-2 text-sm font-semibold text-blue-950 hover:bg-gray-700 hover:text-white">Komunitas</a>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
     </div>
 
@@ -110,61 +112,71 @@
                 </p>
             </div>
         </div>
-        <div class="flex flex-col sm:flex-row justify-center text-center">
-            <a href="#" class="block max-w-sm p-6 hover:bg-gray-100">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="block max-w-sm p-6 rounded-md hover:bg-gray-100">
                 <img src="../assets/about-us/left-hand.png" class="items-center" alt="image" />
-                <h5 class="mb-2 text-2xl font-bold tracking-normal text-gray-900 capitalize">layanan professional</h5>
-            </a>
-            <a href="#" class="block max-w-sm p-6 hover:bg-gray-100">
+                <h3 class="mb-2 text-2xl font-bold text-gray-900 capitalize">layanan professional</h3>
+            </div>
+            <div class="block max-w-sm p-6 rounded-md hover:bg-gray-100">
                 <img src="../assets/about-us/right-hand.png" class="items-center" alt="image" />
-                <h5 class="mb-2 text-2xl font-bold tracking-normal text-gray-900 capitalize">komunitas belajar</h5>
-            </a>
+                <h3 class="mb-2 text-2xl font-bold text-gray-900 capitalize">komunitas belajar</h3>
+            </div>
         </div>
     </section>
 
     <!-- Service -->
-    <section id="Service" class="section items-center bg-blue-800">
-        <div class="flex flex-col sm:mb-8 sm:flex-row sm:justify-start">
+    <section id="Service" class="section bg-blue-800 has-outline">
+        <div class="container mx-auto max-w-7xl grid lg:grid-cols-2 md:grid-cols-2 gap-10 has-outline">
+            <!-- Left Column: Text Content -->
             <div class="text-start">
-                <h1 class="title capitalize text-orange-400">layanan</h1>
+                <h1 class="title text-orange-400 capitalize">layanan</h1>
                 <p class="subtitle text-white">Website? Desain? Konsultasi? Hubungi Kami!</p>
-                <div class="mt-5 flex gap-x-6 justify-end">
+                <div class="mt-5 flex justify-end">
                     <a href="#"
-                        class="rounded-full bg-white px-9 py-2 text-sm font-semibold text-orange-400 hover:bg-gray-700 capitalize">lihat
-                        selangkapnya</a>
+                        class="inline-block rounded-full bg-white px-6 py-2 text-sm font-semibold text-orange-400 hover:bg-gray-700 hover:text-white transition-colors capitalize">
+                        lihat selangkapnya
+                    </a>
                 </div>
+            </div>
+
+            <!-- Right Column: Image -->
+            <div class="flex justify-end">
+                <img src="../assets/ServiceUs (png).png" alt="Service Illustration" class="max-w-full h-auto">
             </div>
         </div>
     </section>
-    <br><br>
-    <section class="max-w-7xl rounded-3xl bg-blue-800 py-2.5">
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4 lg:divide-x-3 lg:divide-solid lg:divide-white lg:py-8">
+    <br>
+
+    <!-- Statistic Section -->
+    <section class="max-w-7xl rounded-3xl bg-blue-800 py-2.5 justify-self-center mx-auto">
+        <div
+            class="container grid md:grid-cols-2 lg:grid-cols-4 lg:divide-x-3 lg:divide-solid lg:divide-white lg:py-8 mx-auto max-w-7xl">
             <div class="text-center">
-                <h1 class="title font-medium text-white capitalize">2</h1>
+                <h3 class="title font-medium text-white capitalize">2</h3>
                 <p class="subtitle text-white">Tahun Pengalaman</p>
             </div>
             <div class="text-center">
-                <h1 class="title font-medium text-white capitalize">999+</h1>
+                <h3 class="title font-medium text-white capitalize">999+</h3>
                 <p class="subtitle text-white">Project Terselesaikan</p>
                 <!-- border-l-2 border-solid border-white -->
             </div>
             <div class="text-center">
-                <h1 class="title font-medium text-white capitalize">99+</h1>
+                <h3 class="title font-medium text-white capitalize">99+</h3>
                 <p class="subtitle text-white">Client kami</p>
             </div>
             <div class="text-center">
-                <h1 class="title font-medium text-white capitalize">5</h1>
+                <h3 class="title font-medium text-white capitalize">5</h3>
                 <p class="subtitle text-white">Team Professional</p>
             </div>
         </div>
     </section>
-
+    <br>
 
     <!-- Card -->
     <section>
         <div class="flex flex-col md:flex-row rounded-lg border border-gray-200 bg-white shadow-sm hover:bg-gray-100">
-            <div class="flex flex-col-2 justify-between p-4">
-                <h1 class="title font-bold text-black">Headline</h1>
+            <div class="grid grid-cols-2 justify-between p-4">
+                <h1 class="title font-bold text-black">Program Development</h1>
                 <p class="subtitle mt-3 text-base text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Totam
                     earum blanditiis quasi quaerat. Laborum cupiditate ratione, nam voluptates facere tenetur
@@ -174,17 +186,29 @@
             <img class="h-48 w-full object-cover md:h-auto md:w-48" src="/docs/images/blog/image-4.jpg" alt="" />
         </div>
         <br />
-        <div class="flex flex-col items-center rounded-lg border border-gray-200 bg-white shadow-sm hover:bg-gray-100">
-            <div class="flex flex-col-2 justify-between p-4">
-                <h1 class="title font-bold text-black">Headline</h1>
-                <p class="subtitle mb-3 text-justify text-black">Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit.
-                    Totam earum blanditiis quasi quaerat. Laborum cupiditate ratione, nam voluptates facere tenetur
-                    repudiandae amet praesentium culpa nihil itaque corporis quae tempore eligendi.</p>
-                <img class="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-                    src="/docs/images/blog/image-4.jpg" alt="" />
+        <div class="flex flex-col md:flex-row rounded-lg border border-gray-200 bg-white shadow-sm hover:bg-gray-100">
+            <div class="grid grid-cols-2 justify-between p-4">
+                <h1 class="title font-bold text-black">Content Writer</h1>
+                <p class="subtitle mt-3 text-base text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Totam
+                    earum blanditiis quasi quaerat. Laborum cupiditate ratione, nam voluptates facere tenetur
+                    repudiandae
+                    amet praesentium culpa nihil itaque corporis quae tempore eligendi.</p>
             </div>
+            <img class="h-48 w-full object-cover md:h-auto md:w-48" src="/docs/images/blog/image-4.jpg" alt="" />
         </div>
+        <div class="flex flex-col md:flex-row rounded-lg border border-gray-200 bg-white shadow-sm hover:bg-gray-100">
+            <div class="grid grid-cols-2 justify-between p-4">
+                <h1 class="title font-bold text-black">Administrator</h1>
+                <p class="subtitle mt-3 text-base text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Totam
+                    earum blanditiis quasi quaerat. Laborum cupiditate ratione, nam voluptates facere tenetur
+                    repudiandae
+                    amet praesentium culpa nihil itaque corporis quae tempore eligendi.</p>
+            </div>
+            <img class="h-48 w-full object-cover md:h-auto md:w-48" src="/docs/images/blog/image-4.jpg" alt="" />
+        </div>
+
         <div class="mt-5 flex gap-x-6 justify-center">
             <a href="#"
                 class="rounded-full bg-blue-800 px-9 py-2 text-sm font-semibold text-white hover:bg-gray-700 capitalize">lihat
@@ -194,13 +218,13 @@
     </section>
     <!-- Contact Us -->
     <section id="contactUs" class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center">
-            <h1 class="title text-balance text-gray-900"><span class="capitalize">ayo</span> hubungi kami</h2>
-                <p class="subtitle text-gray-600"><span class="capitalize">ada</span> yang mau disampaikan atau
+        <div class="mx-auto container text-center">
+            <h1 class="title text-balance text-gray-900 mb-8"><span class="capitalize">ayo</span> hubungi kami</h2>
+                <p class="subtitle text-gray-600 mb-8"><span class="capitalize">ada</span> yang mau disampaikan atau
                     ditanyakan? Yuk langsung hubungi kami</p>
         </div>
-        <form action="#" method="POST" class="mx-auto mt-10 max-w-xl sm:mt-20">
-            <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+        <form action="#" method="POST" class="mx-auto mt-10 max-w-md sm:mt-20 justify-self-center justify-items-center">
+            <div class="container grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div>
                     <!-- Name -->
                     <div class=" mt-2.5 relative flex items-center">
@@ -227,7 +251,7 @@
                 <div class="sm:col-span-2">
                     <div class="relative flex items-center">
                         <input type="email" name="email" id="email" autocomplete="email" placeholder="Email"
-                            class="w-full inline-flex rounded-md bg-white p-2.5 text-base text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:bg-blue-800">
+                            class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:bg-blue-800">
 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="absolute w-6 h-6">
@@ -246,7 +270,7 @@
                                 d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 0 1-.923 1.785A5.969 5.969 0 0 0 6 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337Z" />
                         </svg>
                         <textarea name="message" id="message" rows="4" placeholder="Pesan"
-                            class="inlin w-full rounded-md bg-white p-2.5 pl-10 text-base text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:bg-blue-800"
+                            class="inline w-full rounded-md bg-white p-2.5 pl-10 text-base text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:bg-blue-800"
                             required></textarea>
                     </div>
                 </div>
@@ -259,11 +283,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white mx-auto w-full max-w-screen-xl">
+    <footer class="block bg-white mx-auto w-full shadow-sm ">
         <div class="flex h-16 w-auto items-center justify-start">
-            <img src="../assets/logic-lab icon.png" alt="Logic Lab" />
+            <!-- <img src="../assets/logic-lab icon.png" alt="Logic Lab" class="flex items-center" /> -->
+            Logic Lab
         </div>
-        <div class="grid grid-cols-2 gap-8 md:grid-cols-4 lg:py-8">
+        <div class="container justify-items-center justify-self-center grid grid-cols-2 gap-8 md:grid-cols-4 lg:py-8">
             <div>
                 <p class="subtitle text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
                     natus, expedita quibusdam placeat, fuga eligendi ab nobis laborum unde, nulla ea. Commodi sed illum
@@ -321,8 +346,9 @@
                 </ul>
             </div>
         </div>
-        <div class="flex justify-center bg-blue-800">
-            <small class="subtitle text-white">Copyright 2025 | Logiclab</small>
+        <div class=" flex justify-center bg-blue-800 font-semibold">
+            <hr class="my-6 md:border-gray-700 sm:mx-auto lg:my-8" />
+            <small class="subtitle block sm:text-center text-white">Copyright 2025 | Logiclab</small>
         </div>
     </footer>
 

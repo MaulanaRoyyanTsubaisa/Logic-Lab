@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .navbar {
-  @apply mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 relative flex h-16 items-center;
+  @apply container md:mx-auto px-2 sm:px-6 lg:px-8 relative flex h-16 items-center;
 }
 
 .navbar-brand {
@@ -17,7 +17,7 @@
 }
 
 .navbar-menu {
-  @apply flex h-16 w-auto items-center justify-end;
+  @apply flex flex-wrap h-16 w-auto items-center justify-between md:mx-auto;
 }
 
 .buttons {
