@@ -2,10 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"name": "tailwind-vue-starter",
-			"path": "tailwind-vue-starter"
 		}
 	],
 	"settings": {
