@@ -4,7 +4,7 @@
     <div class="navbar-brand items-center sm:items-stretch sm:justify-center">
       <div class="flex shrink-0 items-center">Logic Lab</div>
     </div>
-    <!-- Mobile menu button-->
+    <!-- Mobile menu -->
     <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
       <button
         type="button"
@@ -51,6 +51,7 @@
         </svg>
       </button>
     </div>
+    <!-- Mobile menu -->
   </nav>
 </template>
 <style scoped>
