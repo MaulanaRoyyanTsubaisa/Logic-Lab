@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from "vue";
-const heroImage = ref("../../assets/her");
+const heroImage = ref(
+  "my-vue-app/src/assets/hero-section/hero-section (resize).png"
+);
 
 // const isMobileMenuOpen = ref(false);
 
