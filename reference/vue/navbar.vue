@@ -1,10 +1,8 @@
 <script setup>
 import { ref } from "vue";
 
-// State to track mobile menu visibility
 const isMobileMenuOpen = ref(false);
 
-// Function to toggle mobile menu
 const toggleMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
 };
