@@ -51,7 +51,37 @@
         </svg>
       </button>
     </div>
-    <!-- Mobile menu -->
+    <!-- Desktop menu -->
+    <menu class="navbar-menu">
+      <div class="hidden sm:block">
+        <div class="navbar-buttons">
+          <a
+            href="#home"
+            class="navbar-item text-gray-700 hover:text-blue-950"
+            aria-current="page"
+            >Beranda</a
+          >
+          <a
+            href="#service"
+            class="navbar-item text-gray-700 hover:text-blue-950"
+            >Layanan</a
+          >
+          <a
+            href="#aboutUs"
+            class="navbar-item text-gray-700 hover:text-blue-950"
+            >Tentang</a
+          >
+          <a href="#" class="navbar-item text-gray-700 hover:text-blue-950"
+            >Desain</a
+          >
+          <a
+            href="#"
+            class="rounded-full bg-blue-800 px-9 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+            >Kirim Pesan</a
+          >
+        </div>
+      </div>
+    </menu>
   </nav>
 </template>
 <style scoped>
