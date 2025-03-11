@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [vue(), tailwindcss()],
   build: {
     rollupOptions: {
-      logiclab: "my-vue-app/LogicLab.html",
+      logiclab: "./LogicLab.html",
     },
   },
 });
