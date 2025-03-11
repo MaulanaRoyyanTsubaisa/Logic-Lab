@@ -1,5 +1,5 @@
 import { createApp } from "vue";
 import "./inputStyle.css";
-import App from "./App.vue";
+import LogicLab from "./LogicLab.vue";
 
-createApp(App).mount("#app");
+createApp(LogicLab).mount("#app");

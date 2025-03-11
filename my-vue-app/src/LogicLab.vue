@@ -4,7 +4,4 @@
   <h1 class="text-3xl font-bold underline">Hello World!</h1>
 </template>
 
-<style scoped>
-@import url(../../tailwindcss/input.css);
-@import url(../../tailwindcss/output.css);
-</style>
+<style scoped></style>
