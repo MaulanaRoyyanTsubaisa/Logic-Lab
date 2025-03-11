@@ -1,114 +1,160 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+
+const isMobileMenuOpen = ref(false);
+
+const toggleMenu = () => {
+  isMobileMenuOpen.value = !isMobileMenuOpen.value;
+};
+</script>
 
 <template>
   <!-- navbars -->
   <header>
-    <nav class="navbar bg-white drop-shadow-md">
-      <div class="navbar-brand flex h-16 items-center justify-between px-4">
-        <!-- <img
-          src="vue3_tailwind4_logiclab-app\src/assets/logic-lab icon.png"
-          alt="Logic Lab"
-          class="h-8 w-auto"
-        /> -->
+    <nav class="navbar bg-white shadow-md shadow-gray-500 has-outline">
+      <div class="navbar-brand items-center sm:items-stretch sm:justify-center">
+        <div class="flex shrink-0 items-center">Logic Lab</div>
       </div>
+      <!-- Mobile menu -->
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <button
+          type="button"
+          @click="toggleMenu"
+          class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-blue-950 hover:text-blue-950 focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="absolute -inset-0.5"></span>
+          <span class="sr-only">Open main menu</span>
 
-      <div class="navbar-menu">
-        <!-- Desktop Menu -->
-        <div class="hidden sm:flex sm:items-center sm:space-x-4">
-          <a href="#" class="navbar-item text-gray-700 hover:text-blue-950"
-            >Beranda</a
+          <svg
+            v-if="!isMobileMenuOpen"
+            class="block size-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
           >
-          <a href="#" class="navbar-item text-gray-700 hover:text-blue-950"
-            >Layanan</a
-          >
-          <a href="#" class="navbar-item text-gray-700 hover:text-blue-950"
-            >Tentang</a
-          >
-          <a href="#" class="navbar-item text-gray-700 hover:text-blue-950"
-            >Desain</a
-          >
-          <a
-            href="#"
-            class="rounded-full bg-blue-950 px-6 py-2 text-sm font-medium text-white hover:bg-gray-700"
-          >
-            Kirim Pesan
-          </a>
-        </div>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
 
-        <!-- Mobile Menu Button -->
-        <div class="sm:hidden">
-          <button
-            type="button"
-            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none"
+          <svg
+            v-else
+            class="hidden size-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
           >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="block h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-            <svg
-              class="hidden h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18 18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-        </div>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
       </div>
+      <!-- Desktop menu -->
+      <menu class="navbar-menu">
+        <div class="hidden sm:block">
+          <div class="navbar-buttons">
+            <a
+              href="#home"
+              class="navbar-item text-gray-700 hover:text-blue-950"
+              aria-current="page"
+              >Beranda</a
+            >
+            <a
+              href="#service"
+              class="navbar-item text-gray-700 hover:text-blue-950"
+              >Layanan</a
+            >
+            <a
+              href="#aboutUs"
+              class="navbar-item text-gray-700 hover:text-blue-950"
+              >Tentang</a
+            >
+            <a href="#" class="navbar-item text-gray-700 hover:text-blue-950"
+              >Desain</a
+            >
+            <a
+              href="#"
+              class="rounded-full bg-blue-800 px-9 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              >Kirim Pesan</a
+            >
+          </div>
+        </div>
+      </menu>
 
       <!-- Mobile Menu -->
-      <div class="sm:hidden" id="mobile-menu">
+      <div class="sm:hidden" id="mobile-menu" v-if="isMobileMenuOpen">
         <div class="space-y-1 px-2 pt-2 pb-3">
           <a
             href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-700 hover:text-white"
+            class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
             aria-current="page"
             >Beranda</a
           >
           <a
             href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >Layanan</a
           >
           <a
             href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >Tentang</a
           >
           <a
             href="#"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-700 hover:text-white"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >Desain</a
           >
-          <a
-            href="#"
-            class="block rounded-full bg-blue-950 px-6 py-2 text-center text-sm font-medium text-white hover:bg-gray-700"
-          >
-            Kirim Pesan
-          </a>
         </div>
+      </div>
+
+      <!-- Search Button -->
+      <div
+        class="absolute inset-y-0 right-0 flex pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-1"
+      >
+        <button
+          type="button"
+          class="relative rounded-full bg-blue-500 hover:text-blue-950 p-1 text-blue-400 focus:outline-hidden focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+        >
+          <span class="absolute -inset-1.5"></span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+            />
+          </svg>
+        </button>
       </div>
     </nav>
   </header>
 
   <!-- Hero section / home -->
-  <main id="home" class="section">
+  <main
+    id="home"
+    class="section"
+    :style="{ backgroundImage: `url(${heroImage})` }"
+  >
     <section
       class="sm:mb-8 mx-auto flex sm:flex-row flex-col sm:justify-center"
     >
@@ -150,23 +196,20 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div class="block max-w-sm p-6 rounded-md hover:bg-gray-100">
-        <!-- <img
+        <img
           src="../assets/about-us/left-hand.png"
           class="items-center"
           alt="image"
-        /> -->
+        />
         <h3 class="mb-2 text-2xl font-bold text-gray-900 capitalize">
           layanan professional
         </h3>
       </div>
       <div class="block max-w-sm p-6 rounded-md hover:bg-gray-100">
         <img
-          <!--
           src="../assets/about-us/right-hand.png"
           class="items-center"
           alt="image"
-          --
-        />
         />
         <h3 class="mb-2 text-2xl font-bold text-gray-900 capitalize">
           komunitas belajar
@@ -176,9 +219,9 @@
   </section>
 
   <!-- Service -->
-  <section id="Service" class="section bg-blue-800">
+  <section id="Service" class="section bg-blue-800 has-outline">
     <div
-      class="container mx-auto max-w-7xl grid lg:grid-cols-2 md:grid-cols-2 gap-10"
+      class="container mx-auto max-w-7xl grid lg:grid-cols-2 md:grid-cols-2 gap-10 has-outline"
     >
       <!-- Left Column: Text Content -->
       <div class="text-start">
@@ -198,11 +241,11 @@
 
       <!-- Right Column: Image -->
       <div class="flex justify-end">
-        <!-- <img
+        <img
           src="../assets/ServiceUs (png).png"
           alt="Service Illustration"
           class="max-w-full h-auto"
-        /> -->
+        />
       </div>
     </div>
   </section>
@@ -234,75 +277,8 @@
       </div>
     </div>
   </section>
-  <br />
 
   <!-- Card -->
-  <section>
-    <div
-      class="flex flex-col md:flex-row rounded-lg border border-gray-200 bg-white shadow-sm hover:bg-gray-100"
-    >
-      <div class="grid grid-cols-2 justify-between p-4">
-        <h1 class="title font-bold text-black">Program Development</h1>
-        <p class="subtitle mt-3 text-base text-black">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam earum
-          blanditiis quasi quaerat. Laborum cupiditate ratione, nam voluptates
-          facere tenetur repudiandae amet praesentium culpa nihil itaque
-          corporis quae tempore eligendi.
-        </p>
-      </div>
-      <!-- <img
-        class="h-48 w-full object-cover md:h-auto md:w-48"
-        src="/docs/images/blog/image-4.jpg"
-        alt=""
-      /> -->
-    </div>
-    <br />
-    <div
-      class="flex flex-col md:flex-row rounded-lg border border-gray-200 bg-white shadow-sm hover:bg-gray-100"
-    >
-      <div class="grid grid-cols-2 justify-between p-4">
-        <h1 class="title font-bold text-black">Content Writer</h1>
-        <p class="subtitle mt-3 text-base text-black">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam earum
-          blanditiis quasi quaerat. Laborum cupiditate ratione, nam voluptates
-          facere tenetur repudiandae amet praesentium culpa nihil itaque
-          corporis quae tempore eligendi.
-        </p>
-      </div>
-      <!-- <img
-        class="h-48 w-full object-cover md:h-auto md:w-48"
-        src="/docs/images/blog/image-4.jpg"
-        alt=""
-      /> -->
-    </div>
-    <div
-      class="flex flex-col md:flex-row rounded-lg border border-gray-200 bg-white shadow-sm hover:bg-gray-100"
-    >
-      <div class="grid grid-cols-2 justify-between p-4">
-        <h1 class="title font-bold text-black">Administrator</h1>
-        <p class="subtitle mt-3 text-base text-black">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam earum
-          blanditiis quasi quaerat. Laborum cupiditate ratione, nam voluptates
-          facere tenetur repudiandae amet praesentium culpa nihil itaque
-          corporis quae tempore eligendi.
-        </p>
-      </div>
-      <!-- <img
-        class="h-48 w-full object-cover md:h-auto md:w-48"
-        src="/docs/images/blog/image-4.jpg"
-        alt=""
-      /> -->
-    </div>
-
-    <div class="mt-5 flex gap-x-6 justify-center">
-      <a
-        href="#"
-        class="rounded-full bg-blue-800 px-9 py-2 text-sm font-semibold text-white hover:bg-gray-700 capitalize"
-        >lihat selangkapnya</a
-      >
-      <!-- rounded-full bg-blue-800 px-9 py-2 text-sm font-semibold text-gray-300 hover:bg-gray-700 hover:text-white -->
-    </div>
-  </section>
   <!-- Contact Us -->
   <section id="contactUs" class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
     <div class="mx-auto container text-center">
@@ -442,11 +418,8 @@
   <!-- Footer -->
   <footer class="block bg-white mx-auto w-full shadow-sm">
     <div class="flex h-16 w-auto items-center justify-start">
-      <!-- <img
-        src="../assets/logic-lab icon.png"
-        alt="Logic Lab"
-        class="flex items-center"
-      /> -->
+      <!-- <img src="../assets/logic-lab icon.png" alt="Logic Lab" class="flex items-center" /> -->
+      Logic Lab
     </div>
     <div
       class="container justify-items-center justify-self-center grid grid-cols-2 gap-8 md:grid-cols-4 lg:py-8"
