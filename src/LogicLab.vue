@@ -196,11 +196,11 @@ const toggleMenu = () => {
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div class="block max-w-sm p-6 rounded-md hover:bg-gray-100">
-        <img
+        <!-- <img
           src="../assets/about-us/left-hand.png"
           class="items-center"
           alt="image"
-        />
+        /> -->
         <h3 class="mb-2 text-2xl font-bold text-gray-900 capitalize">
           layanan professional
         </h3>
@@ -242,7 +242,7 @@ const toggleMenu = () => {
       <!-- Right Column: Image -->
       <div class="flex justify-end">
         <img
-          src="../assets/ServiceUs (png).png"
+          src="../src/assets/ServiceUs (png).png"
           alt="Service Illustration"
           class="max-w-full h-auto"
         />
