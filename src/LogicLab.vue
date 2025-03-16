@@ -206,11 +206,11 @@ const toggleMenu = () => {
         </h3>
       </div>
       <div class="block max-w-sm p-6 rounded-md hover:bg-gray-100">
-        <img
+        <!-- <img
           src="../assets/about-us/right-hand.png"
           class="items-center"
           alt="image"
-        />
+        /> -->
         <h3 class="mb-2 text-2xl font-bold text-gray-900 capitalize">
           komunitas belajar
         </h3>
