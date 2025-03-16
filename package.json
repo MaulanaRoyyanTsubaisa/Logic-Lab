@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 {
   "name": "project-website-logic-lab",
   "version": "1.0.0",
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/MaulanaRoyyanTsubaisa/Logic-Lab#readme"
 }
-=======
+
 {
   "name": "vue3_tailwind4_logiclab-app",
   "private": true,
@@ -41,4 +41,4 @@
     "vite": "^6.2.0"
   }
 }
->>>>>>> 0d149db (first commit)
+
